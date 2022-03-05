@@ -1,0 +1,24 @@
+{
+  "name": "javascript-slack-bot-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "npm run build:live",
+    "build:live": "nodemon --watch 'src/**/*.js' --exec 'ts-node' src/app.js",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "format": "npx prettier --write src"
+  },
+  "author": "Doarakko",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^3.9.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "nodemon": "^2.0.15"
+  }
+}
